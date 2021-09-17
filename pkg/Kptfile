@@ -59,3 +59,10 @@ openAPI:
           name: anthos.servicemesh.user-auth.oidc.redirectURIPath
           value: "/_gcp_asm/authenticate"
           isSet: true
+    io.k8s.cli.setters.anthos.servicemesh.user-auth.oidc.certificateAuthorityData:
+      description: The base 64 encoded certificate PEM for the OIDC provider
+      x-k8s-cli:
+        setter:
+          name: anthos.servicemesh.user-auth.oidc.certificateAuthorityData
+          value: ""
+          isSet: true

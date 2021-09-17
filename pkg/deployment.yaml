@@ -66,6 +66,8 @@ spec:
         - mountPath: /etc/config
           name: config-volume
           readOnly: true
+        - name: tmp
+          mountPath: /tmp
       volumes:
       - name: key-volume
         secret:
@@ -75,6 +77,8 @@ spec:
           defaultMode: 420
           name: user-auth-config
         name: config-volume
+      - name: tmp
+        emptyDir: {}
 ---
 apiVersion: security.istio.io/v1beta1
 kind: PeerAuthentication
